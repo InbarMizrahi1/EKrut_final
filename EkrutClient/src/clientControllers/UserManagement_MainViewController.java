@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class UserManagement_MainViewController {
 
@@ -35,12 +36,12 @@ public class UserManagement_MainViewController {
     
     @FXML
     void clickBtnCreateAccount(ActionEvent event) {
-    	scene.createOrUpdateClient(false);
+    	scene.createOrUpdateClient(event, false);
     }
 
     @FXML
     void clickBtnUpdate(ActionEvent event) {
-    	scene.createOrUpdateClient(true);
+    	scene.createOrUpdateClient(event, true);
 
     }
 

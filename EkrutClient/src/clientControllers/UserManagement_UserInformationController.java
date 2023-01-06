@@ -66,12 +66,13 @@ public class UserManagement_UserInformationController {
 
 	SetSceneController scene = new SetSceneController();
 	User userToApprove = null;
-
-
+	
+	public UserManagement_UserInformationController() {}
+	
 	public UserManagement_UserInformationController(boolean isUpdate) {
 		this.isUpdate = isUpdate;
 	}
-	
+
 	public void initialize() {
 		lblErrorMsg.setVisible(false);
 		if (isUpdate) {
@@ -83,6 +84,8 @@ public class UserManagement_UserInformationController {
 			lblCreditCard.setVisible(false);
 		}
 	}
+
+	
 
 	@FXML
 	void clickBtnImport(ActionEvent event) {
